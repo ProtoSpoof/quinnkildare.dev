@@ -181,7 +181,7 @@ export default function Home() {
 						<Image src={me} alt='picture of the author' className='rounded-full' role='presentation' />
 					</div>
 					<p className='text-justify [text-align-last:center] text-base h-full' title='main about content'>
-						I'm a student majoring in Computer Science and the Vice-President of the Knight's Table Tennis
+						I&apos;m a student majoring in Computer Science and the Vice-President of the Knight&apos;s Table Tennis
 						Club at the University of Central Florida. I started programming in high school and have stuck
 						with it ever since. Since then I have learned and become proficient in many programming
 						languages like Python, Java, C and C++, but I prefer to program in C whenever possible. I like
@@ -195,7 +195,7 @@ export default function Home() {
 				<div className='container grid grid-cols-1 gap-8 justify-center content-center m-8'>
 					<h2 className='glow text-center text-3xl'>Skills</h2>
 					<p className='text-justify [text-align-last:center] text-base' title='skills subtext'>
-						I've learned a lot since I started programming. Here are just a few of the skills that I've
+						I&apos;ve learned a lot since I started programming. Here are just a few of the skills that I&apos;ve
 						picked up along the way.
 					</p>
 					<ul className='flex flex-wrap gap-8 justify-between content-between' title='list of skills'>
@@ -213,7 +213,7 @@ export default function Home() {
 				<div className='container grid grid-cols-1 gap-8 justify-center content-center m-8'>
 					<h2 className='glow text-center text-3xl'>Projects</h2>
 					<p className='text-justify [text-align-last:center] text-base' title='projects subtext'>
-						These are some of the projects I'm most proud of.
+						These are some of the projects I&apos;m most proud of.
 					</p>
 					<div className='flex flex-wrap gap-8 justify-center content-between'>
 						{user.projects.map((e, ind) => {
