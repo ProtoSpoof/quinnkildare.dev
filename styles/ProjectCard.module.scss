@@ -1,0 +1,42 @@
+$r: 50px; // glow radius
+$o: 25px; // glow offset
+$d: 2s; // duration
+$chars: 15; // # of letters
+$bg: #111; // background color
+
+$c: cyan yellow tomato;
+
+.background {
+	background-image: linear-gradient(45deg, #c6ffdd, #fbd786, #f7797d);
+}
+
+.grow {
+	transition: transform 0.5s;
+}
+
+.grow:hover,
+.grow:focus {
+	transform: scale(1.05);
+}
+
+.card:hover,
+.card:focus {
+	animation: cardglow $d ease-in-out both infinite;
+}
+
+@mixin cardglow($c1, $c2, $c3) {
+	box-shadow: 0 0 $r/6 snow, 0 (-$o/6) $r/6 $c3, (-$o/6) $o/6 $r/6 $c2, $o/6 $o/6 $r/6 $c3;
+}
+
+@keyframes cardglow {
+	0%,
+	100% {
+		@include cardglow(nth($c, 1), nth($c, 2), nth($c, 3));
+	}
+	33% {
+		@include cardglow(nth($c, 2), nth($c, 3), nth($c, 1));
+	}
+	66% {
+		@include cardglow(nth($c, 3), nth($c, 1), nth($c, 2));
+	}
+}

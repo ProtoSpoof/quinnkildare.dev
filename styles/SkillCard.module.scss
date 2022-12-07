@@ -1,0 +1,67 @@
+$r: 50px; // glow radius
+$o: 25px; // glow offset
+$d: 2s; // duration
+$chars: 15; // # of letters
+$bg: #111; // background color
+
+$c: cyan yellow tomato;
+
+.cardinner {
+	transition: transform 1s, cardglow 0.005s ease-in-out;
+	transform-style: preserve-3d;
+}
+
+// .card:hover .cardinner {
+// 	animation: cardglow $d ease-in-out both infinite;
+// 	transform: rotateY(-180deg);
+// }
+
+.card:hover .cardinner,
+.card:focus .cardinner {
+	animation: cardglow $d ease-in-out both infinite;
+	transform: rotateY(-180deg);
+}
+
+.logo {
+	transition: transform 1s;
+	backface-visibility: hidden;
+}
+
+.grow {
+	transition: transform 0.5s;
+}
+
+.grow:focus,
+.grow:hover {
+	transform: scale(1.05);
+}
+
+.frontface {
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+}
+
+.backface {
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+}
+
+@mixin cardglow($c1, $c2, $c3) {
+	box-shadow: 0 0 $r/6 snow, 0 (-$o/6) $r/6 $c3, (-$o/6) $o/6 $r/6 $c2, $o/6 $o/6 $r/6 $c3;
+}
+
+@keyframes cardglow {
+	0%,
+	100% {
+		@include cardglow(nth($c, 1), nth($c, 2), nth($c, 3));
+	}
+	33% {
+		@include cardglow(nth($c, 2), nth($c, 3), nth($c, 1));
+	}
+	66% {
+		@include cardglow(nth($c, 3), nth($c, 1), nth($c, 2));
+	}
+}
