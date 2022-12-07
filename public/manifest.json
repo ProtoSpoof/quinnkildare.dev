@@ -16,8 +16,8 @@
 			"sizes": "512x512"
 		}
 	],
-	"name": "Kildare Portfolio Site",
-	"short_name": "Portfolio",
+	"name": "Kildare Personal Site",
+	"short_name": "quinnkildare.dev",
 	"theme_color": "#731616",
 	"background_color": "#121212",
 	"display": "standalone",

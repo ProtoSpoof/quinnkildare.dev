@@ -1,5 +1,12 @@
-import React from 'react';
-import styles from '../styles/ProjectCard.module.scss';
+import React from "react";
+import styles from "../styles/ProjectCard.module.scss";
+
+type ProjectCardProps = {
+	name: string;
+	summary: string;
+	url: string;
+	languages: string[];
+};
 
 function ProjectCard(props: ProjectCardProps) {
 	return (
@@ -10,7 +17,7 @@ function ProjectCard(props: ProjectCardProps) {
 				window.open(props.url.toString());
 			}}
 			onKeyPress={(e) => {
-				if (e.key == 'Enter') window.open(props.url.toString());
+				if (e.key == "Enter") window.open(props.url.toString());
 			}}
 			title={`link to ${props.name} on github`}
 			role='link listitem'
@@ -23,13 +30,13 @@ function ProjectCard(props: ProjectCardProps) {
 			</h3>
 
 			<p className='text-sm text-left text-gray-300 flex-grow' title='project summary'>
-				{props.summary ? props.summary : 'Just checkout the github'}
+				{props.summary ? props.summary : "Just checkout the github"}
 			</p>
 
 			<ul className='flex flex-wrap gap-1' title='project languages'>
 				{props.languages.map((e, ind) => {
 					return (
-						<li key={ind} className={`bg-[#00000070] rounded-full`}>
+						<li key={ind} className={"bg-[#00000070] rounded-full"}>
 							<div
 								className={`py-2 px-4 text-xs text-transparent bg-clip-text font-medium ${styles.background}`}
 							>
@@ -43,11 +50,5 @@ function ProjectCard(props: ProjectCardProps) {
 	);
 }
 
-type ProjectCardProps = {
-	name: String;
-	summary: String;
-	url: String;
-	languages: String[];
-};
 
 export default ProjectCard;

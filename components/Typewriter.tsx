@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import styles from '../styles/Typewriter.module.scss';
+import React, { useState, useEffect } from "react";
+import styles from "../styles/Typewriter.module.scss";
 
 export function calculateBackspaces(from: string, to: string): number {
 	let charsInCommonFromStart = 0;
@@ -24,7 +24,7 @@ export type TextGeneratorResult = {
 };
 
 export function* textGenerator(sentences: string[], loop?: boolean): Generator<TextGeneratorResult> {
-	let text = '';
+	let text = "";
 
 	do {
 		for (const sentence of sentences) {
@@ -41,7 +41,7 @@ export function* textGenerator(sentences: string[], loop?: boolean): Generator<T
 			// The tricky bit
 			const missingChars = sentence.slice(text.length);
 
-			const missingCharsArray = missingChars.split('');
+			const missingCharsArray = missingChars.split("");
 
 			for (const missingChar of missingCharsArray) {
 				text += missingChar;
@@ -67,7 +67,7 @@ type TypewriterProps = {
 
 const Typewriter = (props: TypewriterProps) => {
 	const [{ text, blink }, setResult] = useState<TextGeneratorResult>(() => ({
-		text: '',
+		text: "",
 		blink: false,
 	}));
 
@@ -92,7 +92,7 @@ const Typewriter = (props: TypewriterProps) => {
 	return (
 		<p className='pl-[1ch]' title='typewriter'>
 			{text}
-			<span className={`${blink ? styles.blink : ''}`}>_</span>
+			<span className={`${blink ? styles.blink : ""}`}>_</span>
 		</p>
 	);
 };

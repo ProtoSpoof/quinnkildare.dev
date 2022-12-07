@@ -1,14 +1,19 @@
-import React from 'react';
-import * as SiIcons from 'react-icons/si';
-import styles from '../styles/SkillCard.module.scss';
+import React from "react";
+import * as SiIcons from "react-icons/si";
+import styles from "../styles/SkillCard.module.scss";
+
+type SkillCardProps = {
+	skill: string;
+	level: string;
+};
 
 function SkillCard(props: SkillCardProps) {
 	const SkillLogo =
 		SiIcons[
-			'Si' +
+			"Si" +
 				(props.skill[0].toUpperCase() + props.skill.slice(1).toLowerCase())
-					.replaceAll('+', 'plus')
-					.replaceAll('.', 'dot')
+					.replaceAll("+", "plus")
+					.replaceAll(".", "dot")
 		];
 	return (
 		<li
@@ -33,10 +38,5 @@ function SkillCard(props: SkillCardProps) {
 		</li>
 	);
 }
-
-type SkillCardProps = {
-	skill: String;
-	level: String;
-};
 
 export default SkillCard;
