@@ -1,0 +1,12 @@
+@import './vars.scss';
+@import './anims.scss';
+
+.logo {
+    font-family: 'Yellowtail', cursive;
+    animation: smallglow $d ease-in-out both infinite;
+    font-size: xx-large;
+}
+
+.linkglow:hover{
+    animation: bottomglow $d ease-in-out both infinite;
+}
