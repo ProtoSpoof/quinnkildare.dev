@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Yellowtail&display=swap');
 @import './vars.scss';
 @import './anims.scss';
+
+@font-face {
+	font-family: 'Yellowtail';
+	src: url(../fonts/Yellowtail/Yellowtail-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Fira Code';
+	src: url(../fonts/Fira_Code/FiraCode-VariableFont_wght.ttf);
+}
 
 html,
 body {
