@@ -25,8 +25,7 @@ export default function Card() {
 						</h3>
 					</div>
 					<p className='text-xs text-gray-300'>
-					Computer Science student at the University of Central Florida with a minor in Intelligent Robotic
-					Systems. Experience with full stack development, as well as developing standalone applications in C
+					Computer Science student at the University of Central Florida. Experience with full stack development, as well as developing standalone applications in C
 					and C++.
 					</p>
 					<div className='flex content-center justify-between'>
