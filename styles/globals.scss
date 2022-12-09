@@ -22,6 +22,10 @@ body {
 	background: $bg-primary;
 }
 
+html:has(main[data-noscroll]), body:has(main[data-noscroll]) {
+	overflow-y: hidden;
+}
+
 section:nth-of-type(even) {
 	background-color: $bg-primary-dark;
 }

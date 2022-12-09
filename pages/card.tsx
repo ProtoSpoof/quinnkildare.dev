@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "../styles/Card.module.scss";
 import Link from "next/link";
@@ -6,11 +6,12 @@ import CustomHead from "../components/CustomHead";
 import me from "../public/images/me.gif";
 
 export default function Card() {
+	
 	return (
 		<>
 			<CustomHead Title="Card - quinnkildare.dev" Description="Business Card"/>
-			<main className={"flex items-center justify-center h-screen bg-gradient-to-br from-[#fc5c7d] to-[#6a82fb]"}>
-				<div className='grid grid-cols-1 gap-8 bg-black/75 font-semibold text-center rounded-xl shadow-3xl shadow-black p-10 max-w-xs'>
+			<main data-noscroll className={`flex items-center justify-center h-screen bg-gradient-to-br from-[#fc5c7d] to-[#6a82fb] ${styles.card}`}>
+				<div className='grid grid-cols-1 gap-8 font-semibold text-center rounded-xl p-10  max-w-xs'>
 					{/* <Image src={me} className='mb-3 w-32 h-32 rounded-full shadow-lg mx-auto' alt='product designer'> */}
 					<div
 						className='flex content-center justify-center self-center justify-self-center h-[150px] aspect-square glow-circle'
@@ -19,8 +20,8 @@ export default function Card() {
 						<Image src={me} alt='picture of the author' className='rounded-full' role='presentation' />
 					</div>
 					<div>
-						<h1 className={`text-2xl text-transparent bg-clip-text ${styles.background}`}>Quinlan Kildare</h1>
-						<h3 className='text-sm text-gray-400 '>
+						<h1 className='text-2xl'>Quinlan Kildare</h1>
+						<h3 className='text-sm'>
 							<em className='text-inherit'>Computer Scientist. Programmer. Engineer.</em>
 						</h3>
 					</div>
