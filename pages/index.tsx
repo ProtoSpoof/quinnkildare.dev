@@ -26,7 +26,7 @@ export default function Home() {
 	return (
 		<>
 			<CustomHead Title="Home - quinnkildare.dev" Description="Home Page"/>
-			<main className='grid grid-cols-1 content-center justify-center w-full bg-[#121212] text-[snow]'>
+			<main className='grid grid-cols-1 content-center justify-center w-full'>
 				<Particles
 					className='absolute h-full w-full z-10'
 					options={{
@@ -109,7 +109,7 @@ export default function Home() {
 					}}
 				></Particles>
 				<section
-					className='grid grid-cols-1 gap-2 sm:gap-5 md:gap-8 content-center justify-center splash w-full bg-transparent relative top-0 left-0 z-10'
+					className='grid grid-cols-1 gap-2 sm:gap-5 md:gap-8 content-center justify-center splash w-full relative top-0 left-0 z-10'
 					style={{height: window.innerHeight}}
 					title='splash area'
 				>
@@ -130,7 +130,7 @@ export default function Home() {
 								title='link to linkedin'
 							>
 								<svg
-									className='h-10 sm:h-14 md:h-16 w-auto fill-[snow] icon'
+									className='h-10 sm:h-14 md:h-16 w-auto icon'
 									xmlns='http://www.w3.org/2000/svg'
 									width='24'
 									height='24'
@@ -142,7 +142,7 @@ export default function Home() {
 							</a>
 							<a className='h-fit' href='https://github.com/ProtoSpoof' title='link to github'>
 								<svg
-									className='h-10 sm:h-14 md:h-16 w-auto fill-[snow] icon'
+									className='h-10 sm:h-14 md:h-16 w-auto icon'
 									xmlns='http://www.w3.org/2000/svg'
 									width='24'
 									height='24'
@@ -160,7 +160,7 @@ export default function Home() {
 						title='to about section'
 					>
 						<svg
-							className='h-10 sm:h-14 md:h-16 w-auto rotate-90 fill-[snow]'
+							className='h-10 sm:h-14 md:h-16 w-auto rotate-90'
 							xmlns='http://www.w3.org/2000/svg'
 							width='24'
 							height='24'
@@ -174,11 +174,11 @@ export default function Home() {
 
 				<section
 					id='about'
-					className='w-full h-fit flex content-center justify-center overflow-hidden bg-[#00000050]'
+					className='w-full h-fit flex content-center justify-center overflow-hidden'
 					title='about area'
 				>
 					<div className='container grid grid-cols-1 gap-8 justify-center content-center m-8'>
-						<h2 className='glow text-center text-3xl'>About</h2>
+						<h2 className='smallglow text-center text-3xl'>About</h2>
 						<div
 							className='flex content-center justify-center self-center justify-self-center h-[150px] aspect-square glow-circle'
 							title='image container'
@@ -198,7 +198,7 @@ export default function Home() {
 
 				<section className='w-full h-fit flex content-center justify-center overflow-hidden' title='skills area'>
 					<div className='container grid grid-cols-1 gap-8 justify-center content-center m-8'>
-						<h2 className='glow text-center text-3xl'>Skills</h2>
+						<h2 className='smallglow text-center text-3xl'>Skills</h2>
 						<p className='text-justify [text-align-last:center] text-base' title='skills subtext'>
 						I&apos;ve learned a lot since I started programming. Here are just a few of the skills that I&apos;ve
 						picked up along the way.
@@ -212,11 +212,11 @@ export default function Home() {
 				</section>
 
 				<section
-					className='w-full h-fit flex content-center justify-center overflow-hidden bg-[#00000050]'
+					className='w-full h-fit flex content-center justify-center overflow-hidden'
 					title='projects area'
 				>
 					<div className='container grid grid-cols-1 gap-8 justify-center content-center m-8'>
-						<h2 className='glow text-center text-3xl'>Projects</h2>
+						<h2 className='smallglow text-center text-3xl'>Projects</h2>
 						<p className='text-justify [text-align-last:center] text-base' title='projects subtext'>
 						These are some of the projects I&apos;m most proud of.
 						</p>

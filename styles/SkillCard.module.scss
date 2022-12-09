@@ -2,6 +2,7 @@
 @import './anims.scss';
 
 .cardinner {
+	background-color: $bg-secondary;
 	transition: transform 1s, cardglow 0.005s ease-in-out;
 	transform-style: preserve-3d;
 }

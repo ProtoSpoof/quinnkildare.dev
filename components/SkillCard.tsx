@@ -21,7 +21,7 @@ function SkillCard(props: SkillCardProps) {
 			tabIndex={0}
 		>
 			<div
-				className={`w-full aspect-square bg-[#FFFFFF10] rounded-md shadow-2xl shadow-black ${styles.cardinner}`}
+				className={`w-full aspect-square rounded-md shadow-2xl shadow-black ${styles.cardinner}`}
 			>
 				<div className={`grid content-center justify-center h-full text-7xl ${styles.frontface}`}>
 					{SkillLogo ? <SkillLogo className={`${styles.logo}`} title={`${props.skill} logo`} /> : props.skill}

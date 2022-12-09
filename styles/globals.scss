@@ -19,14 +19,15 @@ html,
 body {
 	overflow-x: hidden;
 	scroll-behavior: smooth;
-	background: #121212;
+	background: $bg-primary;
 }
 
-.test {
-	min-height: 100vh;            /* fall-back */
-  	min-height: -moz-available;
-  	min-height: -webkit-fill-available;
-  	min-height: stretch;
+section:nth-of-type(even) {
+	background-color: $bg-primary-dark;
+}
+
+svg {
+	fill: $text-primary;
 }
 
 a {
@@ -35,11 +36,15 @@ a {
 }
 
 * {
-	color: snow;
+	color: $text-primary;
 	box-sizing: border-box;
 	font-family: 'Fira Code', monospace;
 	padding: 0;
 	margin: 0;
+}
+
+p {
+	color: $text-secondary;
 }
 
 
@@ -48,7 +53,7 @@ a {
 }
 
 .glow {
-	color: snow;
+	color: $text-primary;
 	animation: glow $d ease-in-out both infinite;
 
 	@for $i from 1 through $chars {
@@ -56,6 +61,10 @@ a {
 			animation-delay: $i/$chars * -$d;
 		}
 	}
+}
+
+.smallglow {
+	animation: smallglow $d ease-in-out both infinite;
 }
 
 .icon {
