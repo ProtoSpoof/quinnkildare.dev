@@ -26,9 +26,9 @@ export default function Home() {
 	return (
 		<>
 			<CustomHead Title="Home - quinnkildare.dev" Description="Home Page"/>
-			<main className='grid grid-cols-1 content-center justify-center min-h-screen w-screen bg-[#121212] text-[snow]'>
+			<main className='grid grid-cols-1 content-center justify-center w-full bg-[#121212] text-[snow]'>
 				<Particles
-					className='absolute h-screen w-full z-10'
+					className='absolute h-full w-full z-10'
 					options={{
 						fullScreen: { enable: false },
 						background: {
@@ -109,7 +109,8 @@ export default function Home() {
 					}}
 				></Particles>
 				<section
-					className='grid grid-cols-1 gap-2 sm:gap-5 md:gap-8 content-center justify-center splash w-full h-screen bg-transparent relative top-0 left-0 z-10'
+					className='grid grid-cols-1 gap-2 sm:gap-5 md:gap-8 content-center justify-center splash w-full bg-transparent relative top-0 left-0 z-10'
+					style={{height: window.innerHeight}}
 					title='splash area'
 				>
 					<h1 className='glow splash-title justify-self-center text-5xl sm:text-6xl md:text-8xl'>
