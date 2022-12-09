@@ -8,5 +8,5 @@
 }
 
 .linkglow:hover{
-    animation: bottomglow $d ease-in-out both infinite;
+    animation: bottomglow $d ease-in-out both infinite, smallglow $d ease-in-out both infinite;
 }
