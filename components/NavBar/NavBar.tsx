@@ -9,8 +9,8 @@ type Props = {
 
 function NavBar({Links}: Props) {
 	return (
-		<nav className="flex w-full fixed justify-evenly items-center px-4 bg-black/75 z-20">
-			<Link href="/"><a className={`px-2 ${styles.logo}`}>QK</a></Link>
+		<nav className="flex w-full fixed justify-evenly items-center px-4 bg-black/50 z-20">
+			<Link href="/"><a className={`px-2 smallglow ${styles.logo}`}>QK</a></Link>
 			<ul className="flex flex-1 justify-end">
 				{
 					Links.map((link) => {
