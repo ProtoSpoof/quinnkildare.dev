@@ -6,6 +6,9 @@ export const metadata = {
     title: {
         template: '%s | quinnkildare.dev',
         default: 'Home | quinnkildare.dev',
+    },
+    icons: {
+        icon: '/favicon.svg',
     }
 };
 
@@ -22,7 +25,7 @@ export default function RootLayout({ children }) {
         <html lang='en'>
             <body className='h-screen w-screen overflow-hidden honeycomb'>
                 <Fireflies />
-                <div className='absolute w-full h-full top-0 left-0 p-8'>
+                <div className='container absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-8'>
                     {children}
                 </div>
                 <NavBar links={LINKS}/>
