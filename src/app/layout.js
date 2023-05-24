@@ -17,18 +17,20 @@ const LINKS = [
     {name: 'About', path: '/about'},
     {name: 'Skills', path: '/skills'},
     {name: 'Projects', path: '/projects'},
-    {name: 'Contact', path: '/contact'}
+    // {name: 'Card', path: '/card'},
+    {name: 'Contact', path: '/contact'},
 ];
 
 export default function RootLayout({ children }) {
+    let showWipe = false;
     return (
         <html lang='en'>
             <body className='h-screen w-screen overflow-hidden honeycomb'>
                 <Fireflies />
-                <div className='container absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-8'>
+                <div className='container h-full flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-8'>
                     {children}
+                    <NavBar links={LINKS} />
                 </div>
-                <NavBar links={LINKS}/>
             </body>
         </html>
     );

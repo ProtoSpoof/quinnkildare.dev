@@ -3,7 +3,7 @@ import styles from '@/styles/about.module.scss';
 
 export default function About() {
     return (
-        <main className='flex flex-col w-full h-full items-center gap-5'>
+        <main className='flex flex-col w-full h-full items-center justify-center gap-6'>
             <h1 className='text-6xl'>About Me</h1>
             {/* Profile Picture */}
             <div className={styles.imageOutline}>
