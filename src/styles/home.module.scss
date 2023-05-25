@@ -1,8 +1,8 @@
-@import './vars.scss';
-@import './anims.scss';
+@import '@/styles/vars.scss';
+@import '@/styles/anims.scss';
 
 .heroText{
-    padding: 0.5rem;
+    padding: 0.5rem 0.1rem;
     background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, $accent, transparent, transparent);
     -webkit-background-clip: text;
     background-clip: text;

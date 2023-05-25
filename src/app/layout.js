@@ -4,8 +4,7 @@ import '@/styles/globals.scss';
 
 export const metadata = {
     title: {
-        template: '%s | quinnkildare.dev',
-        default: 'Home | quinnkildare.dev',
+        template: '%s │ Quinlan Kildare',
     },
     icons: {
         icon: '/favicon.svg',
@@ -18,16 +17,16 @@ const LINKS = [
     {name: 'Skills', path: '/skills'},
     {name: 'Projects', path: '/projects'},
     // {name: 'Card', path: '/card'},
-    {name: 'Contact', path: '/contact'},
+    // {name: 'Contact', path: '/contact'},
 ];
 
 export default function RootLayout({ children }) {
-    let showWipe = false;
     return (
         <html lang='en'>
-            <body className='h-screen w-screen overflow-hidden honeycomb'>
+            <body className='flex flex-col items-center h-screen w-full honeycomb'> 
+            {/* STOP */}
                 <Fireflies />
-                <div className='container h-full flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-8'>
+                <div className='container min-h-screen h-full flex w-full flex-col overflow-x-hidden p-8 gap-8'>
                     {children}
                     <NavBar links={LINKS} />
                 </div>

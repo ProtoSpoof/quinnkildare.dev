@@ -1,1 +1,1 @@
-export * from '@/components/Navbar/NavBar';
+export * from '@/components/NavBar/NavBar';

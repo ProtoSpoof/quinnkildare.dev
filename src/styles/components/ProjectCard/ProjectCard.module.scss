@@ -1,0 +1,49 @@
+@import '@/styles/vars.scss';
+@import '@/styles/anims.scss';
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 1rem;
+    height: 100%;
+    color: $primary;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    gap: .75rem;
+    transition: all ease-in-out 100ms;
+
+    &:hover {
+        animation: glowDrop 1500ms linear infinite;
+        scale: 105%;
+    }
+
+    hr {
+        border-color: $accent;
+        border-width: 0.1rem;
+    }
+
+    h2 {
+        width: 100%;
+        color: $primary;
+        animation: none;
+        font-family: Fira Sans;
+    }
+
+    p {
+        flex-grow: 1;
+    }
+
+    li {
+        color: $secondary;
+        background: linear-gradient(90deg, $accent 0%, lighten($accent, 10%) 100%);
+        padding: 0.375rem 0.5rem;
+        border-radius: 99999999px;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
