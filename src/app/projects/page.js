@@ -12,7 +12,7 @@ export default async function Projects() {
     return (
         <main className='flex flex-col flex-grow w-full h-full items-center justify-center gap-8'>
             <h1 className='text-6xl'>My Projects</h1>
-            <div className='grid lg:grid-cols-2 auto-rows-fr items-center justify-center gap-8'>
+            <div className='grid lg:grid-cols-2 auto-rows-fr items-center justify-center gap-4'>
                 {projects?.map(({displayName, summary, repositoryUrl, languages}, index) => {
                     return (
                         <ProjectCard name={displayName} summary={summary} link={repositoryUrl} languages={languages} />

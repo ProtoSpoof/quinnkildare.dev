@@ -14,9 +14,11 @@ export default async function About() {
         <main className='flex flex-col flex-grow w-full h-full items-center justify-center gap-8'>
             <h1 className='text-6xl'>About Me</h1>
             <div className='flex flex-col  items-center justify-center gap-8'>
-                <div className={styles.imageOutline}>
-                    <div className={`${styles.imageContainer} relative aspect-square w-64`}>
-                        <Image src={basicInfo.picture} alt='Author Profile Picture' fill/>
+                <div className={styles.imageOuter}>
+                    <div className={styles.imageInner}>
+                        <div className={`${styles.imageContent}`}>
+                            <Image src={basicInfo.picture} alt='Author Profile Picture' fill/>
+                        </div>
                     </div>
                 </div>
                 <p className={`${styles.content} text-xl`}>{basicInfo.summary}</p>
