@@ -11,6 +11,7 @@
     border-radius: 5px;
     gap: .75rem;
     transition: all ease-in-out 100ms;
+    z-index: 1;
 
     &:hover {
         animation: glowDrop 1500ms linear infinite;
