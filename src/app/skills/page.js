@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 export default async function Skills() {
-    const results = await fetch('https://gitconnected.com/v1/portfolio/protospoof')
+    const results = await fetch('https://gitconnected.com/v1/portfolio/protospoof', { next: { revalidate: 10 } })
     const skills = (await results.json()).skills;
 
     function strip_and_fix_names(name) {

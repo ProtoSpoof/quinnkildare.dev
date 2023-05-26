@@ -7,7 +7,7 @@ export const metadata = {
 
 
 export default async function About() {
-    const results = await fetch('https://gitconnected.com/v1/portfolio/protospoof')
+    const results = await fetch('https://gitconnected.com/v1/portfolio/protospoof', { next: { revalidate: 10 } })
     const basicInfo = (await results.json()).basics;
 
     return (

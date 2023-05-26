@@ -6,7 +6,7 @@ export const metadata = {
 };
 
 export default async function Projects() {
-    const results = await fetch('https://gitconnected.com/v1/portfolio/protospoof')
+    const results = await fetch('https://gitconnected.com/v1/portfolio/protospoof', { next: { revalidate: 10 } })
     const projects = (await results.json()).projects;
 
     return (
