@@ -1,8 +1,16 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+  color: $text-primary;
+  margin: 0;
+  padding: 0;
 }
 
 /* Prevent font size inflation */
@@ -70,3 +78,4 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+

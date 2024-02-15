@@ -1,41 +1,71 @@
 <script>
-    import '$lib/sass/global.scss';
-    import { onMount } from "svelte";
-
-    /**
-     * @type {{ basics?: any; }}
-     */
-    let data;
-    onMount(async () => {
-        try {
-            let response = await fetch("https://gitconnected.com/v1/portfolio/protospoof");
-            data = await response.json();
-            console.log(data);
-        } catch (error) {
-            console.log(error);
-            data = {};
-        }
-    });
+    import { GithubLogo, LinkedinLogo } from '$lib/assets/logos/index.js';
+    export let data;
+    let githubProfile = data.basics.profiles.find(
+        (/** @type {{ network: string; }} */ e) => e.network === 'GitHub');
+    let linkedinProfile = data.basics.profiles.find(
+        (/** @type {{ network: string; }} */ e) => e.network === 'LinkedIn');
 </script>
-<img class="profile-picture" src={data?.basics?.image} alt="Quinlan Kildare">
-<h1 class="name">Quinlan Kildare</h1>
-<h2>Computer Scientist, Programmer, Engineer</h2>
-<div>
 
-</div>
+<section class="hero">
+    <h1 class="name">{data.basics.name}</h1>
+    <h2 class="headline">{data.basics.headline}</h2>
+    <div class="profile-links">
+        {#if githubProfile}
+        <div class="link">
+            <a href={githubProfile.url}>
+                <GithubLogo/>
+            </a>
+        </div>
+        {/if}
+
+        {#if linkedinProfile}
+        <div class="link">
+            <a href={linkedinProfile.url}>
+                <LinkedinLogo/>
+            </a>
+        </div>
+        {/if}
+        
+    </div>
+</section>
 
 <style lang="scss">
-    .profile-picture {
-        aspect-ratio: 1;
-        width: clamp(5rem, 10rem, 20rem);
-        border-radius: 9999px;
-        outline-style: solid;
-        outline-color: #fdfd96;
-        outline-width: 1px;
-        box-shadow: 0 0 15px 5px #FDFD96;
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
     }
     .name {
         font-family: 'Yellowtail', cursive;
+        font-size: clamp(3rem, 1.6rem + 7vw, 10rem);
+        text-align: center;
+        padding: 0 1rem;
+        color: $text-primary;
+        text-shadow: 1px 1px 0 $red, 2px 2px 0 $orange, 3px 3px 0 $yellow;
+        word-spacing: 1rem;
     }
+
+    .headline {
+        // font-size: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
+        font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .profile-links {
+        display: flex;
+        gap: clamp(2.5rem, 2rem + 2.5vw, 5rem);
+        padding: 1rem;
+    }
+
+    .link {
+        aspect-ratio: 1/1;
+        width: clamp(2.5rem, 2rem + 2.5vw, 5rem);
+    }
+
 </style>
 

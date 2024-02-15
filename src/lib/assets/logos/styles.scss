@@ -1,0 +1,10 @@
+svg {
+    fill: $text-primary;
+    height: 100%;
+    width: 100%;
+    transition: ease-in-out 0.25s;
+}
+
+svg:hover {
+    fill: $yellow;
+}
