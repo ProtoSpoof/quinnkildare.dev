@@ -1,3 +1,4 @@
+export const ssr = false;
 export async function load({ fetch }) {
     try {
         let response = await fetch("https://gitconnected.com/v1/portfolio/protospoof", );

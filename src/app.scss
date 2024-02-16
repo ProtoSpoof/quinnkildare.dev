@@ -36,6 +36,8 @@ ol[role='list'] {
 body {
   min-height: 100vh;
   line-height: 1.5;
+  background-color: $background;
+  background-image:radial-gradient(circle, $gradient-1 0%, $gradient-3 100%), $dither;
 }
 
 /* Set shorter line heights on headings and interactive elements */

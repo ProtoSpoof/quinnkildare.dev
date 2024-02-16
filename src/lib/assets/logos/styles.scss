@@ -7,4 +7,5 @@ svg {
 
 svg:hover {
     fill: $yellow;
+    filter: saturate(90%);
 }

@@ -1,7 +1,6 @@
 <script>
     import "../app.scss";
     import { Particles } from "$lib/particles/particles.js";
-    export const prerender = true;
     export let data;
 </script>
 
@@ -16,6 +15,7 @@
         height: 100%;
         width: 100%;
         background-color: $background;
+        background-image:radial-gradient(circle, $gradient-1 0%, $gradient-3 100%), $dither;
         top: 0;
         left: 0;
         z-index: -1;

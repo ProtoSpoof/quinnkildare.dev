@@ -45,7 +45,7 @@
         text-align: center;
         padding: 0 1rem;
         color: $text-primary;
-        text-shadow: 1px 1px 0 $red, 2px 2px 0 $orange, 3px 3px 0 $yellow;
+        text-shadow: 1px 1px 0 $black, 2px 2px 0 $orange, 3px 3px 0 $yellow;
         word-spacing: 1rem;
     }
 

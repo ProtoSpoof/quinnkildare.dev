@@ -1,1 +1,0 @@
-export { default as component } from "../../../../../../../../../ProtoSpoof/Documents/Universe/apps/quinnkildare.dev/node_modules/@sveltejs/kit/src/runtime/components/error.svelte";
